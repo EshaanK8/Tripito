@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;800&display=swap" rel="stylesheet">
+
+        <!-- Tripito Stylesheets -->
+        <link href="contactpage.css" rel="stylesheet" type="text/css" />
+        <link href="footer.css" rel="stylesheet" type="text/css" />
+        <link href="navbar.css" rel="stylesheet" type="text/css" />
+        <link href="darkmodeswitch.css" rel="stylesheet" type="text/css" />
+        <link href="homepage-add.css" rel="stylesheet" type="text/css" />
+
+        <!-- Tripito JS -->
+        <script src="contactpage.js"></script>
+
+
+        <!-- Bootstrap Framework CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Contact Us</title>
+
+        <!-- Bootstrap requires it's JS framework to be linked as well -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        </script>
+        <!-- Email JS Lib -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    </head>
+    <body>
+        <!-- NAvigation Bar -->
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#" id="logotings"><img src="Images/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" id="a0" href="homepage.html" style="font-family: Commissioner, sans-serif;">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="a1" href="features.html" style="font-family: Commissioner, sans-serif;">FEATURES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="a2" href="Subscription_Page.htm" style="font-family: Commissioner, sans-serif;">PRICING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="a3" href="team.html" style="font-family: Commissioner, sans-serif;">TEAM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="a4" href="contactpage.html" style="font-family: Commissioner, sans-serif;">CONTACT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <!--Dark Mode Switch-->
+                            <a class="nav-link" id="dmswitch" href="#">
+                                <div class="switch-box">
+                                    <div class="toggle-container">
+                                        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <div class = "container-fluid" id = "main">
+            <div class= "row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4" style = "text-align:center">
+                    <h1 id="head">Contact Us</h1>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-sm-3" style = "color: BLACK">
+                    <h4 class="heading"> Want to ask us a question?</h4></br><h4 class="heading"> Want to let us know what you think?</h4></br><h4 class="heading"> Spot a bug in the system?</h4></br><h4 class="heading"> Let us know! </h4>
+                    <p id="text">
+                        We want to know what you think! The fastest way for us to get even better at what we do best is through your feedback.
+                        Just fill out the form, and be sure to let us know what you want to talk about using the Subject checkboxes!
+                        We'd love to hear from you!
+                    </p>
+                </div>
+                <div class = "col-sm-1">
+                </div>
+                <div class = "col-sm-4">
+                    <form>
+                        <div class = "form-group">
+                            </br>
+                            </br>
+                            <label for = "name" style = "width:100%; padding-left:auto; text-align:center" class = "responselabels"> Name </label>
+                            <input type = "text" class = "form-control" id = "name"/>
+                            </br>
+                            <label for = "email" style = "width:100%; padding-left:auto; text-align:center" class = "responselabels"> Email </label>
+                            <input type = "text" class = "form-control" id = "email"/>
+                            </br>
+                            <label style = "width: 100%; padding-left:auto; text-align:center" class = "responselabels"> Subject </label>
+                            <input type = "text" class = "form-control" id = "subject"/>
+                            </br>
+                            </br>
+                            <label for = "comment" style = "width:100%; padding-left:auto; text-align:center" class = "responselabels"> Comments </label>
+                            <input type = "text" class = "form-control" id = "comments"/>
+                            </br>
+                            <input type = "button" id = 'sendbutton' value = "Send Email" onclick = "sendEmail()"/>
+                        </div>
+                    </form>
+                </div>
+                <div class = "col-sm-4">
+                </div>
+            </div>
+            <div class = "spacer">
+            </div>
+        </div>
+        <footer class="footerw">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <h6>About</h6>
+                  <p class="text-justify" style="font-family: Commissioner, sans-serif;"> <i>Tripito is the all-in-one platform where users can plan their holiday using the many reviews/recommendations offered by other travellers. Tripito offers a wide range of features and services such as live feedback from around the world, local message board and chatting services, hotel bookings, and exchanges.  Don’t miss out on local gems! Tripito ensures you are truly immersed in your destination’s way of life. It is the ultimate holiday planning app, allowing you to make acquaintances before your travel!</i> </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                  <h6>App links</h6>
+                    <p><img src="https://miro.medium.com/max/8982/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" width="147" height="51" /></p>
+      <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/640px-Google_Play_Store_badge_EN.svg.png" alt="" width="149" height="44" /></p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                  <h6>Quick Links</h6>
+                  <ul class="footerw-links">
+                    <li><a href="https://tripito-app.github.io/features.html">Features</a></li>
+                    <li><a href="https://tripito-app.github.io/Subscription_Page.htm">Pricing</a></li>
+                    <li><a href="https://tripito-app.github.io/team.html">Team</a></li>
+                    <li><a href="https://tripito-app.github.io/contactpage.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <p class="copyright">Copyright © 2020 All Rights Reserved by Tripito.
+                  </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <p>&nbsp;<img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png" alt="" width="43" height="43" />&nbsp;&nbsp;<img style="float: left;" src="https://i.pinimg.com/originals/a2/5f/4f/a25f4f58938bbe61357ebca42d23866f.png" alt="" width="47" height="47" /><img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="" width="45" height="45" /></p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </footer>
+      <script type="text/javascript" src="darkmode.js"></script><!--DARK MODE-->
+    </body>
+</html>

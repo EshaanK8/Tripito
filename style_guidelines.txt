@@ -1,0 +1,43 @@
+Overall Look and Feel of Tripito
+===============================
+
+The overall look and feel is of subtleness and warmth. We want the user to feel welcome and not overwhelmed. We want our website to appear energetic and catch the visitor's attention.
+
+Colours
+========
+
+For Tripito, our flat colours show our consumers that we are professional. Our colours convey power yet in a peaceful manner; they do not outshine the content of the website. In addition, the website will offer a dark mode if the user prefers to browse in a more dim setting.
+
+These are our colour swatches:
+
+Light Mode:
+- #77A6F7
+- #FFCCBC
+- #00887A
+- #D3E3FC
+- #54575A
+
+
+Dark Mode:
+- #121212
+- #ACDBCF
+- #F0ECE2
+- #496149
+- #263859
+- #145374
+
+Iconography
+===========
+Our website will have flat iconography and it will be colourful.
+
+Typography
+==========
+We will be using Commissioner from Google Fonts. Specifically, it will be Commissioner sans-serif.
+
+Links
+=====
+Links will be underlined and will change to a darker colour when hovered over.
+
+Buttons
+=======
+Buttons will be also be flat and will incorporate the website colours. They will have a green background and white text. They will have a green background and white text. When they are clicked, they will turn to a darker green.

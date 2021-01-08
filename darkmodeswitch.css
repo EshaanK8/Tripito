@@ -1,0 +1,52 @@
+/*DARK MODE SWITCH*/
+.switch-box{
+}
+#nav-bar input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#nav-bar label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: lightblue;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+#nav-bar label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#nav-bar input:checked + label {
+  background: #0d7377;
+}
+
+#nav-bar input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+#nav-bar label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

@@ -1,0 +1,137 @@
+*
+{
+    margin: 0;
+
+}
+
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: white;
+}
+.navbar-brand img
+{
+    height: 77px;
+    padding-left: 47px;
+    
+}
+.navbar-nav li
+{
+    padding: 0 10px;
+}
+.navbar-nav li a
+{
+    float: right;
+    text-align: left;
+}
+#nav-bar ul li a:hover
+{
+    color: #007bff!important;
+}
+.navbar
+{
+    background: var(--navbar);
+}
+.navbar-toggler
+{
+    border: none!important;
+}
+.nav-link
+{
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+}
+/*-----Slider------*/
+#slider
+{
+    width: 100%;
+}
+.carousel-caption
+{
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial!important;
+}
+.carousel-caption h4
+{
+    color: #fff;
+    font-size: 37px;
+}
+
+/*DARK MODE*/
+html{
+    scroll-behavior: smooth;
+    --bg:#D3E3FC;
+    --navbar:rgba(0, 0, 0, 0);
+    --heading-color:#54575a;
+    --text-color:black;
+    --features-color: #FFCCBC;
+    --featureswrapper-color:white;
+}
+
+html[data-theme='dark'] {
+    --bg:#121212;
+    --navbar:#121212;
+    --heading-color:#ACDBDF;
+    --text-color:#F0ECE2;
+    --features-color: #121212;
+    --featureswrapper-color:#121212;
+    --headingbb-color: #ACDBDF;
+}
+
+
+/*DARK MODE SWITCH*/
+.switch-box{
+}
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: lightblue;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #0d7377;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
